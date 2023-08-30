@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import "./styles.css";
 
 export default function App() {
@@ -34,6 +35,16 @@ export default function App() {
     </div>
   );
 }
+
+TextExpander.propTypes = {
+  children: PropTypes.string,
+  collapsedNumWords: PropTypes.number,
+  expandButtonText: PropTypes.string,
+  collapseButtonText: PropTypes.string,
+  buttonColor: PropTypes.string,
+  expanded: PropTypes.bool,
+  className: PropTypes.string,
+};
 
 function TextExpander({
   children,
